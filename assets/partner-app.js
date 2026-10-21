@@ -381,10 +381,8 @@
             '<h3 class="t-heading" style="color:var(--ink)">' + u.title + '</h3>' +
             '<p style="font-size:0.88rem;color:var(--ink-muted)">' + u.desc + '</p>' +
             '<div class="unit-metrics">' +
-              '<span>الأبعاد: ' + u.dims + '</span>' +
-              '<span>·</span>' +
-              '<span>المساحة: ' + u.area + '</span>' +
-              '<span style="margin-inline-start:auto;color:var(--bronze)">يبدأ من ' + formatSAR(baseA) + ' ر.س</span>' +
+              '<span>الأبعاد: ' + u.dims + ' · المساحة: ' + u.area + '</span>' +
+              '<span class="unit-price-pill">يبدأ من ' + formatSAR(baseA) + ' ر.س</span>' +
             '</div>' +
           '</button>'
         );
@@ -542,6 +540,12 @@
     if (priceAddonsEl) priceAddonsEl.textContent = formatSAR(quote.addonsTotal) + ' ر.س';
     if (priceTransEl) priceTransEl.textContent = formatSAR(quote.transport) + ' ر.س';
     if (priceVatEl) priceVatEl.textContent = formatSAR(quote.vat) + ' ر.س';
+
+    // شريط السعر السفلي الذكي للموبايل
+    var mobTotalEl = document.querySelector('[data-role="mobile-bar-total"]');
+    var mobSubEl = document.querySelector('[data-role="mobile-bar-sub"]');
+    if (mobTotalEl) mobTotalEl.textContent = formatSAR(quote.total) + ' ر.س';
+    if (mobSubEl) mobSubEl.textContent = unit.code + ' · باقة ' + pkg.id + ' · ' + fin.name;
   }
 
   /* ================= 10. ربط الأحداث التفاعلية ================= */

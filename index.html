@@ -43,7 +43,7 @@
 
   <link rel="icon" type="image/svg+xml" href="assets/ewan-mark.svg">
   <link rel="stylesheet" href="assets/fonts.css">
-  <link rel="stylesheet" href="assets/styles.css?v=2">
+  <link rel="stylesheet" href="assets/styles.css?v=3">
 
   <!-- Schema.org Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -141,7 +141,7 @@
               </div>
             </div>
 
-            <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:14px">
+            <div class="hero-cta-group" style="margin-top:32px;display:flex;flex-wrap:wrap;gap:14px">
               <a href="#customize" class="btn btn-gold">جرّب تغيير ألوان المطبخ الآن ←</a>
               <a href="#developer-infographic" class="btn btn-line">استعرض إنفوجراف رحلة المطور العقاري</a>
             </div>
@@ -245,33 +245,33 @@
               <div class="studio-overlay-badges">
                 <span class="studio-pill" data-role="stage-badge-unit">نموذج الشقة A · باقة B</span>
                 <span class="studio-pill" data-role="stage-badge-finish">الواجهة: بلوط فاتح طبيعي</span>
-                <span class="studio-pill" style="background:rgba(138,90,37,0.92);border-color:#e2b880" data-role="stage-badge-price">التقدير الحالي</span>
+                <span class="studio-pill studio-pill-price" style="background:rgba(138,90,37,0.92);border-color:#e2b880" data-role="stage-badge-price">التقدير الحالي</span>
               </div>
             </div>
 
             <!-- 2. المخطط الهندسي العلوي (2D Floorplan) -->
             <div class="floorplan-stage" data-role="studio-plan-stage">
               <div data-role="floorplan-svg-box" style="width:100%;display:flex;justify-content:center"></div>
-              <p style="margin-top:12px;font-size:0.84rem;color:var(--ink-muted);text-align:center;max-width:520px">
+              <p class="floorplan-caption" style="margin-top:12px;font-size:0.84rem;color:var(--ink-muted);text-align:center;max-width:520px">
                 يوضح المخطط العلوي توزيع الوحدات ومثلث الحركة (الحوض، التحضير، الطهي) وعرض الممر الصافي وفق أبعاد شقتك المختارة.
               </p>
             </div>
 
             <!-- شريط معلومات سريع أسفل المنصة -->
-            <div style="margin-top:16px;padding:16px 20px;background:var(--surface-sand);border-radius:14px;border:1px solid var(--border);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px">
+            <div class="studio-info-strip">
               <div>
                 <span style="font:700 0.8rem/1.3 var(--font-sans);color:var(--bronze)">التشطيب النشط الآن:</span>
                 <p data-role="active-finish-desc" style="margin-top:2px;font-size:0.88rem;color:var(--ink);font-weight:600"></p>
               </div>
-              <a href="#summary" class="btn btn-walnut" style="min-height:42px;padding:0 18px">انتقل لملخص السعر ←</a>
+              <a href="#summary" class="btn btn-walnut studio-info-btn" style="min-height:42px;padding:0 18px">انتقل لملخص السعر ←</a>
             </div>
           </div>
 
           <!-- العمود الأيسر: أدوات التحكم بالألوان والأسطح والإكسسوارات -->
-          <aside class="reveal reveal-delay-1" aria-label="خيارات التخصيص" style="display:grid;gap:28px">
+          <aside class="reveal reveal-delay-1 studio-controls-col" aria-label="خيارات التخصيص">
             <!-- أولًا: ألوان وتشطيبات الواجهات الستة -->
-            <div style="background:var(--surface-sand);padding:24px;border-radius:18px;border:1px solid var(--border)">
-              <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:14px">
+            <div class="control-box">
+              <div class="control-box-head">
                 <h3 class="t-heading" style="color:var(--walnut)">01 / لون وتشطيب الواجهات (6 خيارات)</h3>
                 <span style="font-size:0.78rem;color:var(--ink-muted)">كبس حواف آلي مطابق</span>
               </div>
@@ -279,8 +279,8 @@
             </div>
 
             <!-- ثانيًا: سطح العمل (Countertop) -->
-            <div style="background:var(--surface-sand);padding:24px;border-radius:18px;border:1px solid var(--border)">
-              <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:14px">
+            <div class="control-box">
+              <div class="control-box-head">
                 <h3 class="t-heading" style="color:var(--walnut)">02 / سطح العمل (Countertop)</h3>
                 <span style="font-size:0.78rem;color:var(--ink-muted)">مقاوم للحرارة والرطوبة</span>
               </div>
@@ -288,8 +288,8 @@
             </div>
 
             <!-- ثالثًا: التجهيزات الداخلية (الكبينة المفتوحة) -->
-            <div style="background:var(--surface-sand);padding:24px;border-radius:18px;border:1px solid var(--border)">
-              <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:14px">
+            <div class="control-box">
+              <div class="control-box-head">
                 <h3 class="t-heading" style="color:var(--walnut)">03 / إضافات التنظيم الداخلي (اختياري)</h3>
                 <span style="font-size:0.78rem;color:var(--bronze);font-weight:600">بصمة الكبينة المفتوحة</span>
               </div>
@@ -313,36 +313,36 @@
 
         <div class="quote-ledger-grid">
           <!-- تفاصيل المواصفات المختارة + ما يشمله السعر -->
-          <div class="card reveal" style="padding:34px;border-top:4px solid var(--walnut)">
+          <div class="card spec-card reveal" style="border-top:4px solid var(--walnut)">
             <h3 class="t-md" style="color:var(--walnut)">بطاقة مواصفات مطبخك المختار</h3>
             <dl style="margin:22px 0 0;display:grid;gap:12px;font-size:0.94rem">
-              <div style="display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--border)">
+              <div class="spec-dl-row">
                 <dt style="color:var(--ink-muted)">نموذج الوحدة السكنية</dt>
-                <dd style="margin:0;font-weight:700;color:var(--ink);text-align:left" data-role="sum-unit"></dd>
+                <dd data-role="sum-unit"></dd>
               </div>
-              <div style="display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--border)">
+              <div class="spec-dl-row">
                 <dt style="color:var(--ink-muted)">الباقة والتوزيع الهندسي</dt>
-                <dd style="margin:0;font-weight:700;color:var(--ink);text-align:left" data-role="sum-pkg"></dd>
+                <dd data-role="sum-pkg"></dd>
               </div>
-              <div style="display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--border)">
+              <div class="spec-dl-row">
                 <dt style="color:var(--ink-muted)">خامة الهيكل الداخلي</dt>
-                <dd style="margin:0;font-weight:700;color:var(--bronze);text-align:left">ألواح PVC Foam Board مقاومة للماء 100%</dd>
+                <dd style="color:var(--bronze)">ألواح PVC Foam Board مقاومة للماء 100%</dd>
               </div>
-              <div style="display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--border)">
+              <div class="spec-dl-row">
                 <dt style="color:var(--ink-muted)">لون وتشطيب الواجهات</dt>
-                <dd style="margin:0;font-weight:700;color:var(--ink);text-align:left" data-role="sum-finish"></dd>
+                <dd data-role="sum-finish"></dd>
               </div>
-              <div style="display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--border)">
+              <div class="spec-dl-row">
                 <dt style="color:var(--ink-muted)">سطح العمل (Countertop)</dt>
-                <dd style="margin:0;font-weight:700;color:var(--ink);text-align:left" data-role="sum-top"></dd>
+                <dd data-role="sum-top"></dd>
               </div>
-              <div style="display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--border)">
+              <div class="spec-dl-row">
                 <dt style="color:var(--ink-muted)">التجهيزات الداخلية المضافة</dt>
-                <dd style="margin:0;font-weight:700;color:var(--ink);text-align:left" data-role="sum-addons"></dd>
+                <dd data-role="sum-addons"></dd>
               </div>
-              <div style="display:flex;justify-content:space-between;gap:16px;padding-bottom:4px">
+              <div class="spec-dl-row" style="border-bottom:0;padding-bottom:4px">
                 <dt style="color:var(--ink-muted)">الضمان المعتمد</dt>
-                <dd style="margin:0;font-weight:700;color:var(--walnut);text-align:left" data-role="sum-warranty"></dd>
+                <dd style="color:var(--walnut)" data-role="sum-warranty"></dd>
               </div>
             </dl>
 
@@ -518,7 +518,7 @@
 
         <!-- مصفوفة توزيع المسؤوليات: المطور العقاري vs مصنع إيوان -->
         <div class="g2 reveal" style="margin-top:48px;gap:28px">
-          <div class="card" style="padding:34px;border-top:4px solid var(--bronze)">
+          <div class="card spec-card" style="border-top:4px solid var(--bronze)">
             <p class="eyebrow">دور المطور العقاري · صفر عبء تشغيلي</p>
             <h3 class="t-md" style="margin-top:10px;color:var(--walnut)">ماذا يقدّم المطور؟</h3>
             <ul style="margin:18px 0 0;padding-inline-start:20px;display:grid;gap:10px;color:var(--ink)">
@@ -528,7 +528,7 @@
             </ul>
           </div>
 
-          <div class="card" style="padding:34px;border-top:4px solid var(--walnut);background:var(--surface-sand)">
+          <div class="card spec-card" style="border-top:4px solid var(--walnut);background:var(--surface-sand)">
             <p class="eyebrow">دور مصنع إيوان · مسؤولية كاملة من التصميم للضمان</p>
             <h3 class="t-md" style="margin-top:10px;color:var(--walnut)">ماذا تقدّم إيوان للمطور وللمشتري؟</h3>
             <ul style="margin:18px 0 0;padding-inline-start:20px;display:grid;gap:10px;color:var(--ink)">
@@ -540,7 +540,7 @@
         </div>
 
         <!-- لوحة القيمة القابلة للقياس للمطور العقاري (KPI & Analytics Preview) -->
-        <div class="dark reveal" style="margin-top:48px;background:linear-gradient(150deg, #44291c 0%, #24150e 100%);color:#fbf9f6;border-radius:24px;padding:44px;border:1px solid rgba(226,184,128,0.35);box-shadow:var(--shadow-luxury)">
+        <div class="dark dev-kpi-banner reveal" style="margin-top:48px;background:linear-gradient(150deg, #44291c 0%, #24150e 100%);color:#fbf9f6;border-radius:24px;border:1px solid rgba(226,184,128,0.35);box-shadow:var(--shadow-luxury)">
           <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:32px">
             <div style="max-width:620px">
               <p class="eyebrow">قيمة قابلة للقياس للمطور العقاري</p>
@@ -589,6 +589,17 @@
     </section>
   </main>
 
+  <!-- شريط السعر السفلي الثابت على الجوال (Mobile App Sticky Quote Bar) -->
+  <div class="mobile-quote-bar no-print" role="region" aria-label="ملخص السعر السريع للجوال">
+    <div class="mobile-quote-info">
+      <span class="mobile-quote-kicker" data-role="mobile-bar-sub">نموذج الشقة A · باقة B · بلوط فاتح</span>
+      <strong class="mobile-quote-price" data-role="mobile-bar-total">29,440 ر.س</strong>
+    </div>
+    <div class="mobile-quote-actions">
+      <a href="#summary" class="btn btn-gold mobile-quote-cta">ملخص العرض والاعتماد ←</a>
+    </div>
+  </div>
+
   <!-- ================= الفوتر ================= -->
   <footer class="site-footer dark">
     <div class="wrap">
@@ -636,6 +647,6 @@
     </div>
   </footer>
 
-  <script src="assets/partner-app.js?v=2" defer></script>
+  <script src="assets/partner-app.js?v=3" defer></script>
 </body>
 </html>
