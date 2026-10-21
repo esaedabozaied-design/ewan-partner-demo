@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://esaedabozaied-design.github.io/ewan-partner-demo/sitemap.xml

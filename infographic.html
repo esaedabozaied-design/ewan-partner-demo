@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إنفوجراف رحلة الـ QR للمطور العقاري — إيوان للمطابخ والخزائن</title>
+  <meta name="description" content="إنفوجراف توضيحي للمطورين العقاريين يوضح آلية عمل تجربة اختيار المطبخ عبر رمز QR داخل شقق العرض، وتوزيع المهام، والقيمة القابلة للقياس.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://esaedabozaied-design.github.io/ewan-partner-demo/infographic.html">
+  <meta property="og:title" content="إنفوجراف رحلة الـ QR للمطور العقاري — إيوان للمطابخ والخزائن">
+  <meta property="og:description" content="كيف تمنح مشتري وحداتك السكنية تجربة تصميم مطبخه وتغيير ألوانه ومعرفة تكلفته فورًا عبر مسح رمز QR داخل الشقة.">
+  <meta property="og:image" content="https://esaedabozaied-design.github.io/ewan-partner-demo/assets/og-image.jpg">
+  <link rel="icon" type="image/svg+xml" href="assets/ewan-mark.svg">
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .poster-sheet {
+      max-width: 1120px;
+      margin: 40px auto;
+      background: #fbf9f6;
+      border: 1.5px solid var(--border-strong);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-luxury);
+    }
+    .poster-header {
+      background: linear-gradient(145deg, #44291c 0%, #24150e 100%);
+      color: #fbf9f6;
+      padding: 44px 48px;
+      border-bottom: 5px solid var(--gold);
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .poster-body {
+      padding: 44px 48px;
+    }
+    .timeline-flow {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 28px;
+    }
+    .flow-box {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--bronze);
+      border-radius: 16px;
+      padding: 22px;
+      position: relative;
+    }
+    .flow-box-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: var(--walnut);
+      color: var(--gold-bright);
+      font: 700 0.9rem/1 var(--font-display);
+      margin-bottom: 10px;
+    }
+    @media (max-width: 900px) {
+      .poster-header { grid-template-columns: 1fr; padding: 32px 24px; }
+      .poster-body { padding: 32px 24px; }
+      .timeline-flow { grid-template-columns: 1fr; }
+    }
+    @media print {
+      .poster-sheet { margin: 0; border: 0; border-radius: 0; box-shadow: none; max-width: 100%; }
+      .timeline-flow { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body style="background:#efe7da">
+  <!-- شريط علوي للتحكم (يختفي عند الطباعة) -->
+  <header class="site-header dark no-print">
+    <div class="wrap header-inner">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/ewan-logo-horizontal-reverse.svg" alt="إيوان للمطابخ والخزائن" width="150" height="47" decoding="async">
+      </a>
+      <div class="header-actions">
+        <a href="index.html" class="btn btn-line">← العودة للتجربة التفاعلية</a>
+        <a href="docs/ewan-journey-a4.pdf" target="_blank" rel="noopener" class="btn btn-line">نسخة PDF جاهزة</a>
+        <button type="button" onclick="window.print()" class="btn btn-gold">طباعة الإنفوجراف / حفظ PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article class="poster-sheet">
+      <!-- رأس الإنفوجراف -->
+      <header class="poster-header">
+        <div>
+          <img src="assets/ewan-logo-horizontal-reverse.svg" alt="إيوان للمطابخ والخزائن" width="160" height="50" decoding="async" style="margin-bottom:18px">
+          <p class="eyebrow">مقترح شراكة استراتيجية للمطورين العقاريين · المملكة العربية السعودية</p>
+          <h1 class="t-lg" style="margin-top:10px;color:#fbf9f6">
+            رحلة اختيار المطبخ الذكية عبر رمز <span style="color:#e2b880">QR</span> داخل وحدات مشروعك
+          </h1>
+          <p style="margin-top:14px;color:rgba(251,249,246,0.88);font-size:1rem;max-width:620px">
+            نحوّل مطبخ شقة العرض الفارغ إلى تجربة رقمية تفاعلية تُمكّن المشتري من استعراض 3 باقات مطابخ مصممة على مقاس شقته الفعلي، وتغيير الألوان والخامات، ومعرفة التكلفة فورًا.
+          </p>
+        </div>
+
+        <div style="background:#fbf9f6;color:#24150e;border-radius:18px;padding:20px;text-align:center;border:2px solid var(--gold);max-width:250px;margin-inline-start:auto">
+          <img src="assets/qr-partner-demo.svg" alt="رمز QR لتجربة إيوان التفاعلية" width="170" height="170" decoding="async" style="width:160px;height:160px;margin:0 auto;display:block">
+          <strong style="display:block;margin-top:8px;font:700 0.88rem/1.3 var(--font-display);color:var(--walnut)">امسح الرمز لتجربة المنصة الحية</strong>
+          <span style="font-size:0.74rem;color:var(--ink-muted)">يعمل مباشرة من كاميرا الجوال</span>
+        </div>
+      </header>
+
+      <!-- جسم الإنفوجراف -->
+      <div class="poster-body">
+        <h2 class="t-md" style="color:var(--walnut)">أولًا: كيف تعمل رحلة العميل في 6 خطوات متكاملة؟</h2>
+
+        <div class="timeline-flow">
+          <div class="flow-box">
+            <span class="flow-box-num">01</span>
+            <h3 class="t-heading">مسح الـ QR داخل الشقة</h3>
+            <p style="margin-top:6px;font-size:0.88rem;color:var(--ink-muted)">
+              يمسح الزائر رمز الـ QR الموضوع في مطبخ شقة العرض أو في كتيّب المبيعات بدون الحاجة لتحميل أي تطبيق.
+            </p>
+          </div>
+          <div class="flow-box">
+            <span class="flow-box-num">02</span>
+            <h3 class="t-heading">الربط بمخطط الشقة الفعلي</h3>
+            <p style="margin-top:6px;font-size:0.88rem;color:var(--ink-muted)">
+              يختار الزائر نموذج وحدته في المشروع (نموذج A، نموذج B، تاون هاوس) لتظهر له المقاسات والمخططات المطابقة لها.
+            </p>
+          </div>
+          <div class="flow-box">
+            <span class="flow-box-num">03</span>
+            <h3 class="t-heading">مقارنة 3 باقات (A / B / C)</h3>
+            <p style="margin-top:6px;font-size:0.88rem;color:var(--ink-muted)">
+              يقارن بين 3 توزيعات ومستويات تجهيز واضحة لنفس المساحة، جميعها بهيكل PVC Foam Board المقاوم للماء.
+            </p>
+          </div>
+          <div class="flow-box">
+            <span class="flow-box-num">04</span>
+            <h3 class="t-heading">تغيير الألوان والأسطح لحظيًا</h3>
+            <p style="margin-top:6px;font-size:0.88rem;color:var(--ink-muted)">
+              يبدّل بين 6 ألوان وتشطيبات للواجهات + 3 أسطح عمل + إضافات التنظيم الداخلي، ويشاهد النتيجة فورًا.
+            </p>
+          </div>
+          <div class="flow-box">
+            <span class="flow-box-num">05</span>
+            <h3 class="t-heading">سعر مفهوم وشفاف</h3>
+            <p style="margin-top:6px;font-size:0.88rem;color:var(--ink-muted)">
+              يتحدث السعر التقديري تلقائيًا مع كل اختيار، مع بيان واضح لما يشمله من تصنيع وتركيب ونقل وضريبة.
+            </p>
+          </div>
+          <div class="flow-box">
+            <span class="flow-box-num">06</span>
+            <h3 class="t-heading">حفظ الرابط والتعاقد المباشر</h3>
+            <p style="margin-top:6px;font-size:0.88rem;color:var(--ink-muted)">
+              يحفظ العميل رابط اختياراته أو يرسله لفريق إيوان عبر واتساب لاستكمال رفع المقاسات والتصنيع والتركيب.
+            </p>
+          </div>
+        </div>
+
+        <!-- تكامل الأدوار + القيمة القابلة للقياس -->
+        <div class="g2" style="margin-top:36px;gap:24px">
+          <div style="background:var(--surface-sand);padding:26px;border-radius:16px;border:1px solid var(--border)">
+            <h2 class="t-heading" style="color:var(--walnut)">ثانيًا: آلية الدمج وتوزيع المسؤوليات</h2>
+            <ul style="margin:12px 0 0;padding-inline-start:18px;font-size:0.88rem;color:var(--ink);display:grid;gap:8px">
+              <li><strong>المطور العقاري:</strong> يوفّر مخططات المطابخ المعتمدة للوحدات ويتيح وضع رمز الـ QR في شقة العرض (صفر تكلفة أو عبء تشغيلي).</li>
+              <li><strong>مصنع إيوان:</strong> يتولى تجهيز المنصة الرقمية للمشروع، استقبال طلبات المشترين، رفع المقاسات، التصنيع الآلي، التركيب، والضمان المكتوب (10 سنوات للهيكل).</li>
+            </ul>
+          </div>
+
+          <div style="background:#44291c;color:#fbf9f6;padding:26px;border-radius:16px">
+            <h2 class="t-heading" style="color:#e2b880">ثالثًا: قيمة قابلة للقياس للمطور</h2>
+            <ul style="margin:12px 0 0;padding-inline-start:18px;font-size:0.88rem;color:rgba(251,249,246,0.9);display:grid;gap:8px">
+              <li><strong>تقرير التفاعل:</strong> متابعة عدد مسحات الـ QR لكل نموذج شقة في المشروع.</li>
+              <li><strong>تحليل ذوق المشترين:</strong> رصد الباقات والألوان الأكثر اختيارًا من زوار المشروع.</li>
+              <li><strong>مؤشر الإنجاز:</strong> متابعة طلبات المعاينة والوحدات التي تم تركيبها وتسليمها للسكان.</li>
+            </ul>
+          </div>
+        </div>
+
+        <footer style="margin-top:32px;padding-top:18px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:0.84rem;color:var(--ink-muted)">
+          <span><strong>إيوان للمطابخ والخزائن</strong> — المصنع الرئيسي: عسفان · نخدم جميع مناطق المملكة</span>
+          <span>إدارة المشاريع والشراكات: <strong dir="ltr" style="color:var(--walnut)">0504618348</strong> · <strong dir="ltr">info@ewanwood.com</strong></span>
+        </footer>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
