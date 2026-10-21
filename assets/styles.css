@@ -16,8 +16,10 @@
   --walnut-hover: #523222;
   --on-walnut: #fbf9f6;
   --gold: #dfc496;
+  --gold-bright: #e2b880;
   --gold-hover: #ebd3aa;
   --gold-soft: rgba(223, 196, 150, 0.15);
+  --header-h: 82px;
   --bronze: #8a5a25;
   --oak: #c49e76;
   --border: #dcd0c0;
@@ -700,7 +702,8 @@ section.dark {
   will-change: opacity, transform;
 }
 
-.reveal.in-view {
+.reveal.in-view,
+.reveal.is-visible {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
@@ -723,7 +726,8 @@ section.dark {
   transition-delay: calc(var(--stagger-idx, 0) * 120ms);
 }
 
-.reveal-mask.in-view {
+.reveal-mask.in-view,
+.reveal-mask.is-visible {
   clip-path: inset(0% 0 0% 0);
   opacity: 1;
 }

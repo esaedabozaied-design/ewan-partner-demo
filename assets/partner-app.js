@@ -685,28 +685,39 @@
   /* ================= 11. شريط التقدم والأنيميشن عند التمرير ================= */
   function initEffects() {
     var progressBar = document.querySelector('.scroll-progress');
-    if (progressBar) {
-      window.addEventListener('scroll', function () {
-        var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var header = document.querySelector('.site-header');
+    window.addEventListener('scroll', function () {
+      var scrollTop = window.scrollY || document.documentElement.scrollTop;
+      if (progressBar) {
         var docHeight = document.documentElement.scrollHeight - window.innerHeight;
         var pct = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop / docHeight) * 100)) : 0;
         progressBar.style.width = pct + '%';
-      }, { passive: true });
-    }
+      }
+      if (header) {
+        header.classList.toggle('scrolled', scrollTop > 24);
+      }
+    }, { passive: true });
 
     var revealEls = document.querySelectorAll('.reveal, .reveal-mask');
     if ('IntersectionObserver' in window) {
       var obs = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
+            entry.target.classList.add('in-view', 'is-visible');
             obs.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.1 });
-      revealEls.forEach(function (el) { obs.observe(el); });
+      }, { threshold: 0.01, rootMargin: '0px 0px -10px 0px' });
+      revealEls.forEach(function (el) {
+        var rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 1.05) {
+          el.classList.add('in-view', 'is-visible');
+        } else {
+          obs.observe(el);
+        }
+      });
     } else {
-      revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      revealEls.forEach(function (el) { el.classList.add('in-view', 'is-visible'); });
     }
   }
 
